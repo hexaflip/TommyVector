@@ -15,7 +15,8 @@ class tvector{
 	void add(int x);
 
 	tvector crossproduct(const tvector & other);
-
+	
+	//Overloaded Operations
 	tvector operator+(const tvector& other);
 	tvector operator-(const tvector& other);
 	tvector operator*(const tvector& other);

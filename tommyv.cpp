@@ -79,10 +79,17 @@ tvector tvector::crossproduct(const tvector & other){
     return ret;
 }
 
-// Vector Cross Product
+
 tvector tvector::operator*(const tvector& other){
+    int size = other.getsize();
     tvector ret;
-    
+    for (int i = 0; i < size; i++){
+        int val = this->getValueAtIndex(i) * other.getValueAtIndex(i);
+        ret.add(val);
+    }
+    return ret;
+    tvector ret;
+
 }
 
 tvector tvector::operator*(const int other){
