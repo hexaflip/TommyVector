@@ -7,3 +7,5 @@ What are the current features?
 - Vector Addition
 - Vector Multiplation by Scalar
 - Vector Cross Product
+- Stream Output
+- Vector Length
