@@ -6,7 +6,6 @@
 #include "tommy.hpp"
 
 tvector::tvector(int i, int j): vec(std::vector<int>(i, j)){ };
-
 tvector::tvector(): vec(std::vector<int>()){};
 
 int tvector::getsize() const{
@@ -80,16 +79,13 @@ tvector tvector::crossproduct(const tvector & other){
 }
 
 
-tvector tvector::operator*(const tvector& other){
+int tvector::operator*(const tvector& other){
     int size = other.getsize();
-    tvector ret;
+    int sum = 0;
     for (int i = 0; i < size; i++){
-        int val = this->getValueAtIndex(i) * other.getValueAtIndex(i);
-        ret.add(val);
+        sum += this->getValueAtIndex(i) * other.getValueAtIndex(i);
     }
-    return ret;
-    tvector ret;
-
+    return sum;
 }
 
 tvector tvector::operator*(const int other){
@@ -111,4 +107,8 @@ std::ostream& operator<<(std::ostream& os, const tvector& object){
     }
     return os;
 }
+
+
+//Quaternions Part:
+
 
