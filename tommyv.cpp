@@ -93,6 +93,7 @@ tvector tvector::operator*(const int other){
     for (int i = 0; i < this->getsize(); i++){
         ret.add(this->getValueAtIndex(i) * other);
     }
+    return ret;
 }
 
 std::ostream& operator<<(std::ostream& os, const tvector& object){
